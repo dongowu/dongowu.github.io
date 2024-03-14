@@ -34,7 +34,10 @@ jobs:
         with:
           path: ./public
       - name: Install dependencies
-        run: npm clean 
+        run: npm run clean 
+        
+      - name: deploy
+        run: npm run deploy 
   deploy:
     needs: build
     permissions:
